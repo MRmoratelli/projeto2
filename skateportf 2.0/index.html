@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skaters - Matheus Moratelli</title>
+    <link rel="stylesheet" href="./assets/libs/animate/animate.min.css" />
+    <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="assets/libs/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/libs/slick/slick-theme.css"
+    />
+  </head>
+
+  <body>
+    <div class="load" id="load">
+      <div class="spin"></div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content" id="modal"></div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2">Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  Nunca vamos compartinhar seu email.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Senha</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal3"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel3">Fale Conosco</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col">
+                <label class="form-label">Informações pessoais</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nome"
+                  aria-label="First name"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="sobrenome"
+                  aria-label="Last name"
+                />
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <input
+                type="email"
+                class="form-control form-control-sm"
+                id="colFormLabelSm"
+                placeholder="Email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label"
+                >Feedback</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                placeholder="Fale mais sobre sua experiencia!!"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label"
+                >Sugestões</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                placeholder="Quem gostaria de ver por aqui?"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput3" class="form-label"
+                >Top cinco Skaters</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput3"
+                placeholder="Nos conte seu top cinco"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+
+    <header class="container-fluid my-fluid">
+      <div class="box-wrap" id="topo">
+        <div class="container-lg box">
+          <div class="logo" id="logo">
+            <div class="placeholderLogo"></div>
+            <!-- <img height="100" src="./assets/img/skatelogo.webp" alt="logo" /> -->
+          </div>
+          <div class="logo-right">
+            <div class="social-icons">
+              <div>
+                <a
+                  href="https://pt-br.facebook.com/?adlt=strict&toWww=1&redig=6ED7F008A1864B85B6B9EF86DC82481F"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-facebook"></i
+                ></a>
+              </div>
+
+              <div>
+                <a
+                  href="https://www.instagram.com/?hl=en&adlt=strict&toWww=1&redig=863215D6C7CD467584AAAA3DF3313248"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+
+              <div>
+                <a
+                  href="https://www.youtube.com/watch?v=gEcFyQ1068E"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-youtube"></i
+                ></a>
+              </div>
+
+              <div>
+                <a href="" target="_blank">
+                  <i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </div>
+            </div>
+            <nav>
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal2"
+                    href="#"
+                    >Login</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-expanded="false"
+                    >Fale conosco</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal3"
+                        href="#"
+                        >Sugestão de Skaters</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal3"
+                        href="#"
+                        >Deixar feedback</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal3"
+                        href="#"
+                        >Seu top cinco</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="https://www.youtube.com/watch?v=PONKQcZvM-Q"
+                        >Thrasher Mag</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Skateboard</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="box1-wrap">
+        <div class="container-lg box1">
+          <ul id="xxxx">
+            <li><a href="">Skaters</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="banner container-fluid animate__animated animate__fadeInUp">
+      <div class="container-lg carrosel-wrap">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="false"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="img"
+                src="./assets/img/bob_band_mega_rampa.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-md-block">
+                <h5>Bob Burnquist</h5>
+                <p>Mega rampa dreamland, Vista, CA.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="img"
+                src="./assets/img/steve-caballero.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-md-block">
+                <h5>Steve Caballero</h5>
+                <p>Some Skatepark at CA, USA.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="img"
+                src="./assets/img/tony-hawk.webp"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-md-block tony">
+                <h5>Tony Hawk</h5>
+                <p>Some Skatepark.</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container-lg skt">
+        <div class="container text-center">
+          <div
+            id="four"
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-4"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <div class="container-lg">
+      <div class="container text-center">
+        <div id="carrosselDinamico"></div>
+      </div>
+    </div>
+
+    <footer class="container-fluid my-fluid">
+      <div class="box-wrap22">
+        <div class="container-lg box22">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-6 col-md-4 card-info1">
+                <div class="card card22">
+                  <div class="card-body">
+                    <h5 class="card-title">Segurança</h5>
+                    <p class="card-text">
+                      Equipamentos de proteção são fundamentais na pratica do
+                      skateboard pricipalmente pelos iniciantes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 card-info2">
+                <div class="card card22">
+                  <div class="card-body">
+                    <h4 class="card-title">Skate Life</h4>
+                    <p class="card-text">
+                      Pegue seu skate vai pra rua e seja feliz. Skateboard é
+                      liberdade, igualdade e respeito.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 card-info3 total">
+                <div class="card card22">
+                  <div class="card-body">
+                    <h4 class="card-title">Brasil</h4>
+
+                    <p class="card-text">
+                      Nos ultimos anos o brasil vem aumentando sua relenancia no
+                      cenario do skate mondial. Em todas as modalidades.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ultimo">
+              <div class="row">
+                <div class="col-6">
+                  <div class="skate">
+                    <p class="noome ano">Skateboard</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <nav>
+                    <ul class="nav nav-pills">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Ajuda</a>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a
+                          class="nav-link dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          href="#"
+                          role="button"
+                          aria-expanded="false"
+                          >Fale conosco</a
+                        >
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal3"
+                              href="#"
+                              >Deixar feedback</a
+                            >
+                          </li>
+
+                          <li><hr class="dropdown-divider" /></li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="https://www.youtube.com/watch?v=PONKQcZvM-Q"
+                              >Thrasher Mag</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="btn btn-outline-light"
+                          href="#topo"
+                          role="button"
+                          >Voltar ao topo</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/libs/slick/slick.min.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

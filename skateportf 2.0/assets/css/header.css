@@ -1,0 +1,84 @@
+header{
+    background-color: white;
+    float: left;
+    margin: 0;
+    min-width: 100%;
+}
+.my-fluid{
+    padding: 0;
+    
+}
+.box-wrap{
+    background: black;
+}
+.box{
+   display: flex;
+   justify-content: space-between;
+}
+.logo-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.social-icons{
+    float: left;
+   display: flex;
+   justify-content: space-evenly;
+   padding: 0 20px;
+}
+i {
+    color: white;
+    padding: 4px;
+    font-size: 16px;
+}
+i:hover{
+    scale: 2;
+}
+.nav-pills{
+    --bs-nav-link-color: #6c757d;
+    --bs-nav-link-hover-color: #e2e6ed;
+    --bs-nav-link-disabled-color: #6c757d;
+    justify-content: center;
+}
+i{
+    font-size: 20px;
+}
+.box1-wrap{
+    border-bottom: 1px solid #cfcfcf;
+    float: left;
+    width: 100%;
+}
+
+.box1 ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.box1 ul li{
+    float: left;
+    position: relative; 
+}
+.box1 ul li a,
+.box1 ul li a:visited{
+      padding: 3px 6px;
+      padding-top: 0;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+      color: rgb(56, 54, 54);
+      
+}
+
+.box1 ul li{
+    border-right: 2px solid #cfcfcf;
+}
+
+.placeholderLogo{
+    width: 100px;
+    height: 100px;
+    background: gray;
+}
+
